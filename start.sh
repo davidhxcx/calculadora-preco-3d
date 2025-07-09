@@ -19,6 +19,6 @@ echo "📂 Diretório atual: $(pwd)"
 echo "📋 Arquivos disponíveis:"
 ls -la
 
-# Iniciar servidor PHP
+# Iniciar servidor PHP com router
 echo "🚀 Iniciando servidor PHP na porta $PORT..."
-exec php -S 0.0.0.0:$PORT -t . index.php
+exec php -S 0.0.0.0:$PORT -t . router.php

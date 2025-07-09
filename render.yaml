@@ -1,16 +1,10 @@
 services:
   - type: web
     name: calculadora-preco-3d
-    runtime: php
+    env: docker
+    dockerfilePath: ./Dockerfile
     plan: free
-    buildCommand: ./build.sh
-    startCommand: ./start.sh
     healthCheckPath: /
-    env: production
     envVars:
-      - key: PHP_VERSION
-        value: "8.1"
-      - key: DOCUMENT_ROOT
-        value: /opt/render/project/src
       - key: TZ
-        value: America/Sao_Paulo
+        value: "America/Sao_Paulo"
