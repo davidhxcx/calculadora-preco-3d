@@ -3,6 +3,7 @@
 **Desenvolvido por:** davidhxcx  
 **Versão:** 1.0  
 **Ano:** 2025  
+**Licença:** CC BY 4.0 (Atribuição obrigatória)
 
 Uma aplicação web completa para calcular o preço justo de peças impressas em 3D, considerando múltiplos fatores como consumo energético, preço do filamento, tempo de impressão e margem de lucro.
 
@@ -365,7 +366,26 @@ Principais arquivos de estilo:
 
 ## 📄 Licença
 
-Este projeto é open source e está disponível sob a licença MIT. Sinta-se livre para usar, modificar e distribuir.
+Este projeto está licenciado sob a **Creative Commons Attribution 4.0 International License (CC BY 4.0)**.
+
+### 🔓 Você pode:
+- ✅ **Usar** comercialmente
+- ✅ **Modificar** e adaptar o código
+- ✅ **Distribuir** livremente
+- ✅ **Criar trabalhos derivados**
+
+### 📝 Condições:
+- 🏷️ **Atribuição obrigatória**: Deve dar crédito ao autor original (davidhxcx)
+- 🔗 **Link da fonte**: Incluir link para o projeto original
+- 📋 **Indicar mudanças**: Se modificar, deve indicar o que foi alterado
+
+### 💡 Como dar crédito:
+```
+"Calculadora de Preço para Impressão 3D - Desenvolvido por davidhxcx"
+"Fonte original: https://github.com/davidhxcx/calculadora-preco-3d"
+```
+
+**Licença completa**: Veja o arquivo `LICENSE` para detalhes completos.
 
 ## 🤝 Contribuição
 

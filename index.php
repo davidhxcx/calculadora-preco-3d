@@ -1,4 +1,11 @@
 <!DOCTYPE html>
+<!-- 
+Calculadora de Preço para Impressão 3D
+Desenvolvido por: davidhxcx
+Versão: 1.0 (2025)
+Licença: CC BY 4.0 - Atribuição obrigatória
+Fonte: https://github.com/davidhxcx/calculadora-preco-3d
+-->
 <html lang="pt-br">
 <head>
     <meta charset="UTF-8">
@@ -236,7 +243,11 @@
     </div>
 
     <footer>
-        <p>&copy; 2025 Calculadora de Preço 3D - Desenvolvido por: davidhxcx</p>
+        <p>&copy; 2025 Calculadora de Preço 3D - Desenvolvido por: <strong>davidhxcx</strong></p>
+        <p style="font-size: 0.9em; opacity: 0.8;">
+            Licenciado sob <a href="LICENSE" target="_blank" style="color: inherit;">CC BY 4.0</a> | 
+            <a href="https://github.com/davidhxcx/calculadora-preco-3d" target="_blank" style="color: inherit;">Código Fonte</a>
+        </p>
     </footer>
 
     <script src="assets/js/script.js"></script>
