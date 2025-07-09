@@ -384,3 +384,49 @@ Para dúvidas ou sugestões, abra uma issue no GitHub ou entre em contato.
 ---
 
 **Desenvolvido com ❤️ para a comunidade de impressão 3D**
+
+## 🌐 Deploy e Produção
+
+### Deploy no Render.com
+
+A aplicação está publicada em: **https://calculadora-preco-3d.onrender.com**
+
+#### Configuração do Deploy
+
+O deploy utiliza Docker com as seguintes configurações:
+
+- **Container**: PHP 8.1 + Apache
+- **Módulos Apache**: `rewrite`, `headers`, `deflate`, `expires`
+- **Diretório Web**: `/var/www/html`
+- **Configuração**: `.htaccess` ativo para segurança e cache
+
+#### Arquivos de Configuração
+
+- `Dockerfile` - Container PHP/Apache
+- `render.yaml` - Configurações do serviço
+- `.php-version` - Versão do PHP (8.1)
+- `.user.ini` - Configurações PHP customizadas
+
+### Estrutura de Deploy
+
+```
+├── Dockerfile              # Container Docker
+├── render.yaml             # Configurações Render
+├── .php-version            # Versão PHP
+├── .user.ini              # Config PHP
+├── .htaccess              # Configurações Apache
+└── composer.json          # Dependências PHP
+```
+
+### Como Fazer Deploy
+
+1. **Push para GitHub**:
+   ```bash
+   git add .
+   git commit -m "Deploy changes"
+   git push
+   ```
+
+2. **Deploy Automático**: O Render rebuilda automaticamente quando há commits no repositório.
+
+3. **Verificar Status**: Acesse o painel do Render para monitorar o build.

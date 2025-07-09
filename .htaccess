@@ -6,14 +6,9 @@
 </Files>
 
 # Bloquear arquivos JSON de dados
-<Files "data/*.json">
+<FilesMatch "data/.*\.json$">
     Require all denied
-</Files>
-
-# Permitir manifest.json para PWA
-<Files "manifest.json">
-    Header set Content-Type "application/json"
-</Files>
+</FilesMatch>
 
 # Cache para recursos estáticos
 <IfModule mod_expires.c>
@@ -22,4 +17,17 @@
     ExpiresByType text/css "access plus 1 month"
     ExpiresByType application/javascript "access plus 1 month"
     ExpiresByType application/json "access plus 1 week"
+</IfModule>
+
+# Headers de segurança (opcional - só se mod_headers estiver disponível)
+<IfModule mod_headers.c>
+    # Headers de segurança básicos
+    Header always set X-Content-Type-Options nosniff
+    Header always set X-Frame-Options DENY
+    Header always set X-XSS-Protection "1; mode=block"
+    
+    # Permitir manifest.json para PWA
+    <Files "manifest.json">
+        Header set Content-Type "application/json"
+    </Files>
 </IfModule>
