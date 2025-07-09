@@ -1,0 +1,62 @@
+{
+    "name": "calculadora/preco-3d",
+    "type": "project",
+    "description": "Aplicação web para calcular preços de peças impressas em 3D",
+    "keywords": [
+        "3d-printing",
+        "price-calculator",
+        "php",
+        "creality-cr200b",
+        "filament-cost"
+    ],
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Desenvolvedor",
+            "email": "dev@example.com"
+        }
+    ],
+    "require": {
+        "php": ">=7.4",
+        "ext-json": "*"
+    },
+    "require-dev": {
+        "phpunit/phpunit": "^9.0"
+    },
+    "autoload": {
+        "psr-4": {
+            "PriceCalculator\\": "src/"
+        }
+    },
+    "config": {
+        "optimize-autoloader": true,
+        "sort-packages": true
+    },
+    "scripts": {
+        "test": "phpunit",
+        "serve": "php -S localhost:8000 -t .",
+        "validate": "php -l index.php api.php config.php"
+    },
+    "extra": {
+        "printer": {
+            "model": "Creality CR-200B",
+            "power_consumption": "180W",
+            "chamber": "Fechada"
+        },
+        "energy": {
+            "provider": "Celesc",
+            "state": "Santa Catarina", 
+            "rate": "R$ 0,6346/kWh",
+            "flag": "Bandeira Vermelha 1"
+        },
+        "features": [
+            "Cálculo de custo de filamento",
+            "Cálculo de custo de energia elétrica",
+            "Configuração de margem de lucro",
+            "Histórico de cálculos",
+            "Exportação para CSV",
+            "API REST",
+            "Design responsivo"
+        ]
+    }
+}

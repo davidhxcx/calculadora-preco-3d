@@ -1,0 +1,25 @@
+# Configurações básicas de segurança
+
+# Impedir acesso direto ao config.php
+<Files "config.php">
+    Require all denied
+</Files>
+
+# Bloquear arquivos JSON de dados
+<Files "data/*.json">
+    Require all denied
+</Files>
+
+# Permitir manifest.json para PWA
+<Files "manifest.json">
+    Header set Content-Type "application/json"
+</Files>
+
+# Cache para recursos estáticos
+<IfModule mod_expires.c>
+    ExpiresActive On
+    ExpiresByType image/svg+xml "access plus 1 month"
+    ExpiresByType text/css "access plus 1 month"
+    ExpiresByType application/javascript "access plus 1 month"
+    ExpiresByType application/json "access plus 1 week"
+</IfModule>

@@ -1,0 +1,36 @@
+{
+  "name": "calculadora-preco-3d",
+  "version": "1.0.0",
+  "description": "Aplicação web para calcular preços de peças impressas em 3D",
+  "main": "index.php",
+  "scripts": {
+    "start": "echo \"Abra http://localhost/price_calculator/index.php no navegador\"",
+    "test": "echo \"Acesse http://localhost/price_calculator/test.php para testar a API\"",
+    "serve": "echo \"Certifique-se que o XAMPP está rodando\""
+  },
+  "keywords": [
+    "3d-printing",
+    "price-calculator",
+    "php",
+    "javascript",
+    "creality-cr200b",
+    "filament-cost",
+    "web-application",
+    "cost-calculator"
+  ],
+  "author": "Desenvolvedor",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/usuario/calculadora-preco-3d"
+  },
+  "bugs": {
+    "url": "https://github.com/usuario/calculadora-preco-3d/issues"
+  },
+  "homepage": "https://github.com/usuario/calculadora-preco-3d#readme",
+  "engines": {
+    "php": ">=7.4"
+  },
+  "devDependencies": {},
+  "dependencies": {}
+}

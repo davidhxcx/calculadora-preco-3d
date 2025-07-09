@@ -1,0 +1,26 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" width="32" height="32">
+  <!-- Fundo circular -->
+  <circle cx="16" cy="16" r="15" fill="#667eea" stroke="#5a67d8" stroke-width="1"/>
+  
+  <!-- Base da impressora -->
+  <rect x="6" y="22" width="20" height="6" rx="1" fill="#ffffff"/>
+  
+  <!-- Plataforma -->
+  <rect x="8" y="24" width="16" height="2" rx="0.5" fill="#4a5568"/>
+  
+  <!-- Frame vertical -->
+  <rect x="7" y="10" width="2" height="14" fill="#ffffff"/>
+  <rect x="23" y="10" width="2" height="14" fill="#ffffff"/>
+  
+  <!-- Frame horizontal -->
+  <rect x="7" y="10" width="18" height="2" fill="#ffffff"/>
+  
+  <!-- Cabeça de impressão -->
+  <rect x="12" y="14" width="8" height="4" rx="1" fill="#e53e3e"/>
+  
+  <!-- Bico -->
+  <circle cx="16" cy="20" r="1" fill="#2d3748"/>
+  
+  <!-- Peça -->
+  <rect x="14" y="22" width="4" height="2" rx="0.5" fill="#38b2ac"/>
+</svg>
