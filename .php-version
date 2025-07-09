@@ -1,0 +1,10 @@
+# Configuração para Render.com
+# Este arquivo especifica a versão do PHP e configurações
+
+# Versão do PHP
+echo "8.1" > .php-version
+
+# Extensões PHP necessárias (se houver)
+# mbstring
+# json
+# curl

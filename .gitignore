@@ -3,6 +3,12 @@
 # Pasta do aplicativo mobile (será repositório separado)
 mobile-app/
 
+# Arquivos específicos do Render (manter no repositório)
+# build.sh
+# start.sh
+# .php-version
+# .user.ini
+
 # Arquivos temporários do sistema
 .DS_Store
 Thumbs.db
