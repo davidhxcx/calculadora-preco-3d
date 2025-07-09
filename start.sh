@@ -1,17 +1,24 @@
 #!/usr/bin/env bash
-# Start script para Render
+# Start script para Render - PHP Application
 
 echo "🚀 Iniciando Calculadora de Preço 3D..."
 
-# Verificar se Apache está disponível
-if command -v apache2-foreground &> /dev/null; then
-    echo "🌐 Iniciando com Apache..."
-    exec apache2-foreground
-elif command -v php &> /dev/null; then
-    echo "🌐 Iniciando servidor PHP built-in..."
-    # Usar servidor built-in do PHP na porta do Render
-    exec php -S 0.0.0.0:${PORT:-10000} -t .
-else
-    echo "❌ Erro: PHP não encontrado!"
-    exit 1
+# Configurar diretório de trabalho
+cd /opt/render/project/src || cd .
+
+# Configurar PHP
+export PHP_INI_SCAN_DIR="/opt/render/project/src"
+
+# Verificar porta do Render
+if [ -z "$PORT" ]; then
+    export PORT=10000
 fi
+
+echo "🌐 Porta configurada: $PORT"
+echo "📂 Diretório atual: $(pwd)"
+echo "📋 Arquivos disponíveis:"
+ls -la
+
+# Iniciar servidor PHP
+echo "🚀 Iniciando servidor PHP na porta $PORT..."
+exec php -S 0.0.0.0:$PORT -t . index.php

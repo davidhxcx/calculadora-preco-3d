@@ -1,26 +1,34 @@
 #!/usr/bin/env bash
-# Build script para Render
+# Build script para Render - PHP Application
 
 echo "🚀 Iniciando build da Calculadora 3D..."
 
-# Instalar dependências PHP se houver
-if [ -f "composer.json" ]; then
-    echo "📦 Instalando dependências PHP..."
-    composer install --no-dev --optimize-autoloader
+# Verificar ambiente
+echo "📋 Informações do ambiente:"
+echo "- PWD: $(pwd)"
+echo "- PHP version: $(php --version | head -n 1)"
+echo "- Node version: $(node --version)"
+
+# Criar diretórios necessários para logs e cache
+echo "� Criando diretórios..."
+mkdir -p logs cache tmp
+
+# Verificar arquivos principais
+echo "📋 Verificando arquivos principais..."
+if [ -f "index.php" ]; then
+    echo "✅ index.php encontrado"
+else
+    echo "❌ index.php não encontrado!"
+    exit 1
 fi
 
-# Instalar dependências Node.js se houver
-if [ -f "package.json" ]; then
-    echo "📦 Instalando dependências Node.js..."
-    npm install --production
-fi
+# Listar arquivos para debug
+echo "� Estrutura do projeto:"
+ls -la
 
-# Criar diretórios necessários
-echo "📁 Criando diretórios..."
-mkdir -p data logs cache
-
-# Definir permissões
+# Configurar permissões
 echo "🔧 Configurando permissões..."
-chmod 755 data logs cache
+chmod +x start.sh
+chmod 755 logs cache tmp 2>/dev/null || true
 
 echo "✅ Build concluído com sucesso!"
