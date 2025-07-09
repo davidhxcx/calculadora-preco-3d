@@ -1,6 +1,9 @@
 # Use PHP com Apache
 FROM php:8.1-apache
 
+# Habilitar módulos Apache necessários
+RUN a2enmod rewrite headers deflate expires headers deflate expires
+
 # Instalar extensões PHP necessárias
 RUN docker-php-ext-install mysqli pdo pdo_mysql
 
